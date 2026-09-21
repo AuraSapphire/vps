@@ -5,145 +5,32 @@
     android:orientation="vertical"
     android:background="@drawable/bg_window"
     android:padding="10dp">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:gravity="center_vertical"
-        android:paddingHorizontal="10dp"
-        android:background="@drawable/bg_panel">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="AeroPlayer"
-            android:textColor="#EAF7FF"
-            android:textSize="20sp"
-            android:textStyle="bold"/>
-        <TextView
-            android:id="@+id/libraryCount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0 songs"
-            android:textColor="#8FC8ED"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp" android:gravity="center_vertical" android:paddingHorizontal="10dp" android:background="@drawable/bg_panel">
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="AeroPlayer" android:textColor="#EAF7FF" android:textSize="20sp" android:textStyle="bold"/>
+        <TextView android:id="@+id/libraryCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0 songs" android:textColor="#8FC8ED"/>
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="190dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/bg_panel"
-        android:padding="14dp"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:layout_width="140dp"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:background="#06111F">
-            <TextView
-                android:text="♫"
-                android:textColor="#67C8FF"
-                android:textSize="58sp"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"/>
-            <TextView
-                android:text="AERO"
-                android:textColor="#BFE9FF"
-                android:textSize="12sp"
-                android:letterSpacing=".25"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="190dp" android:layout_marginTop="10dp" android:background="@drawable/bg_panel" android:padding="14dp" android:orientation="horizontal">
+        <LinearLayout android:layout_width="140dp" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical" android:background="#06111F">
+            <TextView android:text="♫" android:textColor="#67C8FF" android:textSize="58sp" android:gravity="center" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+            <TextView android:text="AERO" android:textColor="#BFE9FF" android:textSize="12sp" android:letterSpacing=".25" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8dp"/>
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:paddingStart="14dp"
-            android:orientation="vertical"
-            android:gravity="center_vertical">
-            <TextView
-                android:id="@+id/nowTitle"
-                android:text="Nothing playing"
-                android:textColor="#F2FAFF"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:maxLines="2"
-                android:ellipsize="end"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:id="@+id/nowArtist"
-                android:text="Import music to begin"
-                android:textColor="#86B7D7"
-                android:textSize="14sp"
-                android:layout_marginTop="4dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-            <SeekBar
-                android:id="@+id/seekBar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center">
-                <TextView
-                    android:id="@+id/currentTime"
-                    android:text="0:00"
-                    android:textColor="#79A8C8"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    android:id="@+id/totalTime"
-                    android:text="0:00"
-                    android:textColor="#79A8C8"
-                    android:gravity="end"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"/>
+        <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:paddingStart="14dp" android:orientation="vertical" android:gravity="center_vertical">
+            <TextView android:id="@+id/nowTitle" android:text="Nothing playing" android:textColor="#F2FAFF" android:textSize="20sp" android:textStyle="bold" android:maxLines="2" android:ellipsize="end" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <TextView android:id="@+id/nowArtist" android:text="Import music to begin" android:textColor="#86B7D7" android:textSize="14sp" android:layout_marginTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <SeekBar android:id="@+id/seekBar" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center">
+                <TextView android:id="@+id/currentTime" android:text="0:00" android:textColor="#79A8C8" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"/>
+                <TextView android:id="@+id/totalTime" android:text="0:00" android:textColor="#79A8C8" android:gravity="end" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="54dp"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:background="@drawable/bg_panel">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="8dp" android:gravity="center" android:background="@drawable/bg_panel">
         <Button android:id="@+id/importButton" android:text="IMPORT MUSIC" android:textColor="#EAF7FF" android:background="@drawable/bg_button" android:layout_width="wrap_content" android:layout_height="42dp" android:paddingHorizontal="16dp"/>
         <Button android:id="@+id/prevButton" android:text="◀◀" android:textColor="#EAF7FF" android:background="@drawable/bg_button" android:layout_width="58dp" android:layout_height="42dp" android:layout_marginStart="6dp"/>
         <Button android:id="@+id/playButton" android:text="▶" android:textColor="#FFFFFF" android:background="@drawable/bg_button" android:layout_width="62dp" android:layout_height="42dp" android:layout_marginStart="6dp"/>
         <Button android:id="@+id/nextButton" android:text="▶▶" android:textColor="#EAF7FF" android:background="@drawable/bg_button" android:layout_width="58dp" android:layout_height="42dp" android:layout_marginStart="6dp"/>
         <Button android:id="@+id/shuffleButton" android:text="SHUF" android:textColor="#EAF7FF" android:background="@drawable/bg_button" android:layout_width="58dp" android:layout_height="42dp" android:layout_marginStart="6dp"/>
     </LinearLayout>
-
-    <EditText
-        android:id="@+id/searchBox"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginTop="8dp"
-        android:hint="Search your music…"
-        android:hintTextColor="#6387A1"
-        android:textColor="#EAF7FF"
-        android:singleLine="true"
-        android:paddingHorizontal="14dp"
-        android:background="@drawable/bg_panel"/>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/trackList"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_marginTop="8dp"
-        android:clipToPadding="false"
-        android:paddingBottom="8dp"/>
+    <EditText android:id="@+id/searchBox" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="8dp" android:hint="Search your music…" android:textColorHint="#6387A1" android:textColor="#EAF7FF" android:singleLine="true" android:paddingHorizontal="14dp" android:background="@drawable/bg_panel"/>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/trackList" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:layout_marginTop="8dp" android:clipToPadding="false" android:paddingBottom="8dp"/>
 </LinearLayout>
