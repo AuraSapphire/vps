@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="62dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingHorizontal="12dp"
+    android:background="@drawable/bg_panel">
+    <TextView
+        android:id="@+id/trackNumber"
+        android:layout_width="34dp"
+        android:layout_height="wrap_content"
+        android:text="01"
+        android:textColor="#58B7FF"
+        android:textSize="13sp"/>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/trackTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Song"
+            android:textColor="#EAF7FF"
+            android:textSize="15sp"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+        <TextView
+            android:id="@+id/trackMeta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Local file"
+            android:textColor="#6F9DBB"
+            android:textSize="11sp"
+            android:layout_marginTop="2dp"/>
+    </LinearLayout>
+</LinearLayout>
