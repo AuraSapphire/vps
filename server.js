@@ -24,5 +24,5 @@ app.get("/api/music",async(_req,res)=>{
   }catch(err){res.status(500).json({error:"Could not read music folder"});}
 });
 
-app.get("*",(req,res)=>res.sendFile(path.join(publicDir,"index.html")));
+app.use((_req,res)=>res.sendFile(path.join(publicDir,"index.html")));
 app.listen(PORT,()=>console.log(`AeroPlayer listening on :${PORT}`));
