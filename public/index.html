@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#101827">
+<title>AeroPlayer — Windows Media Player</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="window">
+  <header class="titlebar">
+    <div class="app-icon">▶</div>
+    <div class="title">AeroPlayer</div>
+    <div class="menus"><span>File</span><span>View</span><span>Play</span><span>Tools</span><span>Help</span></div>
+    <div class="window-buttons"><button>_</button><button>□</button><button>×</button></div>
+  </header>
+
+  <div class="toolbar">
+    <button id="libraryBtn">▾ Library</button>
+    <button id="nowPlayingBtn">Now Playing</button>
+    <div class="toolbar-spacer"></div>
+    <label class="search">⌕ <input id="search" placeholder="Search your music"></label>
+  </div>
+
+  <main class="content">
+    <aside class="sidebar">
+      <div class="side-heading">MEDIA LIBRARY</div>
+      <button class="side-item active" data-filter="all">♫ Music <b id="count">0</b></button>
+      <button class="side-item" data-filter="favorites">★ Favorites <b id="favCount">0</b></button>
+      <div class="side-heading">PLAYLISTS</div>
+      <button class="side-item" id="queueBtn">▤ Current playlist</button>
+      <div class="sidebar-note">AeroPlayer<br><small>classic 2000s interface</small></div>
+    </aside>
+
+    <section class="main">
+      <div class="now-playing">
+        <div class="visual">
+          <div class="album" id="album">♪</div>
+          <div class="eq" id="eq"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+        <div class="track-info">
+          <div class="eyebrow">NOW PLAYING</div>
+          <h1 id="title">Nothing playing</h1>
+          <p id="artist">Drop audio files into the <b>music</b> folder.</p>
+          <div class="progress"><span id="elapsed">0:00</span><input id="seek" type="range" min="0" max="100" value="0"><span id="duration">0:00</span></div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="shuffle" title="Shuffle">🔀</button>
+        <button id="prev" title="Previous">⏮</button>
+        <button id="play" class="play">▶</button>
+        <button id="next" title="Next">⏭</button>
+        <button id="repeat" title="Repeat">🔁</button>
+        <div class="volume">🔊 <input id="volume" type="range" min="0" max="1" step=".01" value=".8"></div>
+      </div>
+
+      <div class="list-head"><b>Music</b><span id="status">Loading library…</span></div>
+      <div id="tracks" class="tracks"></div>
+      <div id="empty" class="empty" hidden>
+        <div>♫</div>
+        <b>Your library is empty</b>
+        <span>Put MP3, WAV, OGG, M4A, AAC or FLAC files inside the <code>music/</code> folder on the VPS, then press Refresh.</span>
+        <button id="refresh" class="xp-button">↻ Refresh library</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="statusbar">
+    <span id="footerStatus">Ready</span>
+    <button id="refreshFooter">↻ Refresh</button>
+  </footer>
+</div>
+<audio id="audio" preload="metadata"></audio>
+<script src="/app.js"></script>
+</body>
+</html>
