@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.AeroPlayer" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:colorAccent">#58B7FF</item>
+        <item name="android:navigationBarColor">#06101D</item>
+        <item name="android:statusBarColor">#071625</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>
